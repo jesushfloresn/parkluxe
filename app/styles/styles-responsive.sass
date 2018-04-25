@@ -1,0 +1,419 @@
+$family-playfair-display : 'Playfair Display', serif;
+
+$color-blanco1 : #FFF;
+
+$color-gris1 : #F7F7F7;
+$color-gris2 : #D3D4D8;
+$color-gris3 : #959499;
+
+$color-negro1: #000;
+
+$color-amarillo1: #D6B34C;
+$color-amarillo2: #DAB74B;
+$color-amarillo3: #C39F3E;
+
+$color-azul1: #00C0DE;
+$color-azul2: #1D212E;
+$color-azul3: rgba(29,33,46,0.95);
+$color-azul4: #2C2F9D;
+$color-azul5: rgba(29,33,46,0.5);
+
+$color-dorado1: #A58530;
+
+//--macbook 11pulgadas
+@media (max-width: 1367px)	
+	.ys-seccion-nav 
+		.navbar 
+			& > .container
+				padding-top: 0.75em
+				padding-bottom: 0.5em
+			.navbar-header
+				.navbar-brand
+					padding: 0.2em
+	.ys-seccion
+		padding-bottom: 4em
+	.ys-content-page
+		background-position: center 0
+		background-size: cover
+		.ys-seccion-inicio 
+			.ys-frase
+				margin-top: 8%
+				span
+					font-size: 2.5em
+					&:nth-of-type(1)
+						line-height: 1em
+				.ys-btn-agendacita
+					margin-top: 1em
+			.ys-btn-dianoche
+				top: 90px
+		.ys-seccion-departamentos
+			background-color: $color-azul2
+			.ys-menu-departamentos
+				max-width: 100%				
+		.ys-seccion-contacto
+			background-color: $color-blanco1
+			padding-bottom: 0
+			.ys-footer 
+				.ys-content-info
+					left: 0
+					max-width: 100%
+					overflow: hidden
+
+@media (max-width: 1199px)
+	.ys-content-page 
+		.ys-seccion-contacto 
+			.ys-footer 
+				.ys-content-info
+					width: auto
+
+@media (max-width: 991px)
+	body
+		font-size: 13px
+
+	.ys-seccion-nav
+		.navbar
+			.nav
+				li
+					a
+						padding: 0.71em 0.5em
+	.ys-content-page
+		.ys-seccion-inicio
+			padding-bottom: 4em
+			.ys-frase
+				background-color: rgba(0,0,0, 0.65)
+				margin-top: 10%
+				padding: 1em
+			
+			.ys-btn-dianoche
+				right: 3.5%
+				top: 80px				
+				span
+					&.ys-image
+						height: 2.5em
+						width: 2.5em
+			
+					&:nth-of-type(1)
+						font-size: 0.8em
+						padding-top: 0.5em
+
+		.ys-seccion-proyecto
+			background-repeat: no-repeat
+			background-size: contain
+			background-position: center bottom
+			padding-bottom: 4em
+			& .container
+				& > .row
+					& > div
+						&:nth-of-type(1)
+							text-align: center
+							video
+								max-width: 200px
+						&:nth-of-type(2)
+							.ys-line
+								span
+									margin: 0 auto
+				.ys-content-parrafos
+					font-size: 1.1em
+					max-width: 600px
+					margin: 0 auto
+					text-align: center
+				.ys-content-artigas
+					font-size: 1em
+					margin: 4em 0
+		
+		.ys-seccion-contacto
+			background-color: $color-azul2
+			.ys-footer
+				.ys-content-info
+					left: 0
+					width: 100%
+					.row
+						margin-left: 0
+						margin-right: 0
+						img
+							display: inline-block
+							max-width: 100px
+						& > div
+							&:nth-of-type(1)
+								padding-top: 2.5em
+							&:nth-of-type(3)
+								padding-top: 1.5em
+
+	#ys-modalContacto
+		.modal-content 
+			.modal-body
+				padding-left: 2em
+				padding-right: 2em
+				.ys-col-2
+					.close
+						height: 30px
+						right: 1%
+						width: 30px
+					.ys-content-btn
+						& > div
+							padding-right: 0
+				.ys-dupla 
+					.ys-input
+						width: 100%
+
+@media (max-width: 768px)
+	.container
+		width: 100%
+
+	.ys-content-page
+		background-size: contain
+
+		&.ys-back-dia
+			background-image: url('../images/768-back-day.png')
+		&.ys-back-noche
+			background-image: url('../images/768-back-night.png')
+
+		.ys-seccion-contacto
+			.ys-footer
+				&.ys-back-dia
+					background-image: url('../images/768-footer-day.png')
+				&.ys-back-noche
+					background-image: url('../images/768-footer-night.png')
+
+@media (max-width: 767px)
+	body
+		font-size: 11px
+	#ys-modalContacto 
+		.modal-content 
+			.modal-body
+				position: relative
+				.ys-close-web
+					display: none
+				.ys-close-mobil
+					background-image: url(../images/icon-cerrar.png)
+					background-size: cover
+					background-color: rgba(0,0,0, 0.5)
+					border-radius: 50%
+					display: block
+					position: absolute
+					right: 1.5%
+					top: 1%
+					width: 30px
+					height: 30px
+				#formContent
+					position: relative
+					.ys-col-1
+						& > div
+							&:nth-of-type(1)
+								margin-top: 1.5em
+						h4
+							font-size: 3em
+						.ys-dupla
+							margin-bottom: 0.5em
+					.ys-col-2
+						.ys-dupla
+							margin-top: 1em
+						.ys-logo-parkluxe
+							display: none
+						button
+							&.close
+								display: none
+						
+						.ys-content-btn
+							margin-top: 1em
+							padding-bottom: 1em
+
+				.ys-msj-info
+					padding-top: 2.5em
+	.navbar
+		.navbar-header
+			padding-bottom: 1em
+			.navbar-toggle
+				&:hover, 
+				&:focus
+					background-color: $color-blanco1
+					.icon-bar
+						background-color: $color-azul3
+				.icon-bar
+					background-color: $color-blanco1
+					width: 25px
+		.navbar-collapse
+			background-color: $color-azul3
+			padding-left: 0
+			padding-right: 0
+			.nav
+				margin: 0
+				width: 100%				
+				li
+					border-bottom: 1px solid $color-blanco1
+					padding: 0.5em 1.5em
+					&.ys-dblock,
+					&.ys-separator
+						border-bottom: none
+						display: inline-block
+						padding-top: 2em
+						vertical-align: middle
+	.ys-content-page	
+		.ys-seccion-inicio
+			position: relative
+			padding: 0
+			.ys-btn-dianoche
+				top: 10em
+			.ys-frase
+				height: 100%
+				margin-top: 75px
+				max-width: 100%
+				padding-top: 2.5em
+				position: absolute
+				width: 100%
+				span
+					line-height: 1.5em
+					&:nth-of-type(1)
+						line-height: 2em
+				.ys-btn-agendacita
+					margin-top: 4em
+		.ys-seccion-caracteristicas 
+			& > .container 
+				.ys-content-tit 
+					h3
+						font-size: 3em
+
+		.ys-seccion-departamentos 
+			.carousel 
+				.ys-tit-slide
+					font-size: 3em			
+			.ys-menu-departamentos
+				padding-top: 3em
+				.row
+					span
+						padding: 1em 1em
+						&.ys-active
+							padding-top: 1em
+					& > div
+						&:nth-of-type(3)
+							clear: both
+		.ys-seccion-contacto
+			.ys-content-pleca			
+				display: none
+			.ys-cuadro-contacto 
+				.row 
+					.ys-col-1 
+						h4
+							font-size: 3em
+							text-align: center
+						.ys-line
+							margin: 0 auto
+						.ys-campos
+							display: block
+							vertical-align: middle
+							text-align: center
+							.ys-etiqueta
+								font-size: 1.25em
+							.ys-valor
+								a
+									font-size: 1.25em
+					.ys-col-2
+						.ys-btn-agendacita
+							margin-top: 12.5%
+							font-size: 1.25em
+
+			.ys-footer 
+				background-color: $color-azul5
+				.ys-frase
+					span
+						font-size: 3em
+
+				.ys-content-info
+					background-color: rgba(255, 255, 255, 0.65)
+
+@media (max-width: 600px)
+	.ys-content-page
+		.ys-seccion-inicio 
+			.ys-frase 
+				span
+					font-size: 3em
+		.ys-seccion-caracteristicas
+			& > .container 
+				.ys-content-tit
+					padding-left: 0
+					h3
+						font-size: 3.5em
+						text-align: center
+
+	.navbar 
+		.navbar-collapse 
+			.nav 
+				li
+					&.ys-dblock
+						a
+							font-size: 1.5em
+					&.ys-houses
+						a
+							font-size: 1em
+
+@media (max-width: 500px)
+	.ys-content-page 
+		.ys-seccion-contacto 
+			.ys-cuadro-contacto 
+				.row 
+					.ys-col-1
+						padding-left: 0
+					.ys-col-2 
+						.ys-btn-agendacita
+							margin-top: 100px
+
+@media (max-width: 450px)
+	.ys-content-page
+		background-size: contain
+		&.ys-back-dia
+			background-image: url('../images/414-back-day.png')
+		&.ys-back-noche
+			background-image: url('../images/414-back-night.png')
+		.ys-seccion-inicio 
+			.ys-frase 
+				span
+					font-size: 3em		
+		.ys-seccion-proyecto 
+			.container 
+				.ys-content-artigas
+					text-align: center
+					.ys-logo
+						img
+							max-width: 50px
+				.ys-icon
+					max-width: 1.1em
+		.ys-seccion-caracteristicas 
+			& > .container 
+				.ys-content-tit 
+					h3
+						font-size: 2.5em
+				& > .ys-content-cols 
+					.ys-col-servicios 
+						.ys-item 
+							.ys-img
+								img
+									max-width: 65px
+									max-height: 65px
+					.ys-col-materiales
+						.ys-item
+							.ys-img
+								img
+									max-width: 65px
+									max-height: 65px
+		.ys-seccion-departamentos 
+			.carousel 
+				.ys-tit-slide
+					font-size: 2.5em
+					margin-top: 2.5em
+
+		.ys-seccion-contacto 
+			.ys-cuadro-contacto 
+				.row 
+					.ys-col-1 
+						h4
+							font-size: 2.5em
+					.ys-col-2
+						.ys-btn-agendacita
+							font-size: 1.25em
+							padding: 1em 1.5em
+			.ys-footer
+				min-height: 45em
+				.ys-frase					
+					span
+						font-size: 2em
+

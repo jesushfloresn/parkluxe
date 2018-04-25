@@ -1,0 +1,591 @@
+$family-playfair-display : 'Playfair Display', serif;
+
+$color-blanco1 : #FFF;
+
+$color-gris1 : #F7F7F7;
+$color-gris2 : #D3D4D8;
+$color-gris3 : #959499;
+
+$color-negro1: #000;
+
+$color-amarillo1: #D6B34C;
+$color-amarillo2: #DAB74B;
+$color-amarillo3: #C39F3E;
+
+$color-azul1: #00C0DE;
+$color-azul2: #1D212E;
+$color-azul3: rgba(29,33,46,0.95);
+$color-azul4: #2C2F9D;
+$color-azul5: #3785C7;
+
+$color-dorado1: #A58530;
+
+body
+	background-color: transparent
+	font-family: $family-playfair-display 
+	font-size: 14px
+	position: relative
+
+//---
+.ys-hidde
+	display: none
+.ys-show
+	display: block
+.ys-seccion	
+	position: relative !important
+.ys-ancla	
+	position: absolute
+	z-index: 9
+//---
+
+// -- -- Modal Contacto
+#ys-modalContacto	
+	.modal-content
+		background-color: $color-amarillo2
+		background-image: url('../images/back-formulario.png')
+		background-size: cover
+		border-radius: 0
+		.modal-header
+			border-bottom:  none
+			display: none
+		.modal-body
+			color: $color-blanco1
+			padding-top: 2em
+			padding-right: 5em
+			padding-left: 5em
+			padding-bottom: 4em
+			.ys-close-mobil
+				display: none				
+			.ys-msjConfirmacion
+				display: none
+				text-align: center
+				width: 100%
+				span
+					color: $color-blanco1
+					display: inline-block
+					font-size: 2em
+					max-width: 420px
+					text-align: center
+					padding: 2em 1em
+				&.ys-show
+					display: block			
+			.ys-dupla
+				& > *
+					display: block
+				label
+					color: $color-negro1
+				.ys-input
+					background-color: $color-amarillo3
+					border: none
+					color: $color-negro1
+					padding: 1em 2em
+					width: 90%
+
+					&::-webkit-input-placeholder
+					    color: $color-amarillo2
+					&:-moz-placeholder
+					    color: $color-amarillo2
+					&::-moz-placeholder
+					    color: $color-amarillo2
+					&:-ms-input-placeholder
+					    color: $color-amarillo2
+
+			.ys-col-1
+				h4
+					color: $color-negro1
+					font-size: 4.28em
+					font-weight: 900
+					-ms-font-feature-settings: "liga", "dlig"
+					-webkit-font-feature-settings: "liga", "dlig"
+					-moz-font-feature-settings: "liga", "dlig"
+					font-feature-settings: "liga", "dlig"			
+				& > div
+					&:nth-of-type(1)
+						margin-top: 4em
+				.ys-dupla
+					margin-bottom: 3em
+			.ys-col-2
+				position: relative
+				.ys-logo-parkluxe
+					display: block
+					max-width: 140px
+					padding-top: 2em
+					padding-left: 1em
+					img
+						display: block
+						width: 100%
+				.close
+					background-image: url('../images/icon-cerrar.png')
+					background-size: cover
+					background-position: center center
+					height: 60px
+					position: absolute
+					right: -1%
+					top: 1%
+					width: 60px
+
+				.ys-content-btn
+					background-color: transparent
+					margin-top: 4.5em
+					width: 94%
+					text-align: right
+					button
+						background-color: transparent
+						border: solid 1px $color-azul2
+						color: $color-negro1
+						font-size: 1em
+						padding: 0.5em 4em 
+				.ys-dupla
+					margin-top: 4em
+					.ys-input
+						min-height: 170px
+		.modal-footer
+			border-top: none
+			display: none
+
+// -- Fin -- Modal Contacto
+
+.ys-seccion-nav
+	.container
+		max-width: 1024px
+	.navbar
+		background-color: transparent
+		border-bottom: transparent
+		padding-top: 0
+		&.ys-background-menu
+			background-color: $color-azul3
+		& > .container
+			border-bottom: $color-blanco1 solid 0.005em
+			padding-top: 2.5em
+			padding-bottom: 1.28em
+		
+		.navbar-header
+			.navbar-brand				
+				min-width: 130px				
+				max-width: 130px				
+				img
+					display: block
+					width: 100%					
+		.nav
+			float: right
+			li	
+				&.ys-hidde
+					display: none
+				a
+					color: $color-blanco1
+					font-family: $family-playfair-display
+					padding: 0.71em 1.71em
+				&.ys-separator
+					padding-left: 1.71em
+					padding-right: 1.71em
+					span
+						border-left: 0.005em solid $color-blanco1
+						display: inline-block
+						height: 2.57em
+						width: 2px
+
+.ys-content-page
+	background-color: $color-azul5
+	background-attachment: fixed
+	background-position: center 0
+	-webkit-transition: all 0.5s ease
+	-moz-transition: all 0.5s ease
+	-o-transition: all 0.5s ease
+	transition: all 0.5s ease	
+	&.toBottom
+		-webkit-animation: backgroundScrollBottom 2s linear 1
+		animation: backgroundScrollBottom 2s linear 1
+		background-position: center -125px
+
+	&.toTop
+		-webkit-animation: backgroundScrollTop 2s linear 1
+		animation: backgroundScrollTop 2s linear 1
+		background-position: center 0
+
+	&.ys-back-dia
+		background-image: url('../images/back-day.png')
+	&.ys-back-noche
+		background-image: url('../images/back-night.png')
+
+	.ys-seccion-inicio
+		position: relative
+		.ys-frase
+			max-width: 55.35em
+			margin: 0 auto
+			margin-top: 12em
+			span
+				color: $color-blanco1
+				display: block
+				font-size: 3.42em
+				line-height: 1.28em
+				text-align: center
+				&:nth-of-type(1)
+					line-height: 2em		
+				&.ys-show
+					display: block
+				&.ys-hidde
+					display: none
+				&.ys-txt
+					animated bounceIn
+				&.ys-lujoconfort
+					font-weight: bold
+			.ys-btn-agendacita
+				background-color: transparent
+				border: solid 1px $color-blanco1
+				color: $color-blanco1
+				cursor: pointer
+				display: block
+				font-size: 1em
+				margin: 0 auto
+				margin-top: 4.28em
+				padding: 0.78em 0
+				width: 15.28em
+		.ys-btn-dianoche
+			position: absolute
+			right: 0
+			top: 16em
+			span
+				color: $color-blanco1
+				&:nth-of-type(1)
+					display: none
+					padding-top: 1.5em
+					padding-right: 0.5em
+					vertical-align: top
+					&.ys-mostrar
+						display: inline-block
+				&.ys-image
+					cursor: pointer
+					display: inline-block
+					height: 3.85em
+					width: 3.85em					
+					&.ys-dia					
+						background-image: url('../images/boton_luna.png')
+						background-size: cover
+					&.ys-noche
+						background-image: url('../images/boton_sol.png')
+						background-size: cover
+						
+
+	.ys-seccion-proyecto
+		background-color: $color-gris1
+		background-image: url('../images/mapa_parkluxe.png')
+		background-size: cover
+		background-position: center center
+		//--Temporal
+		padding-top: 4em
+		
+		#ys-video-logo
+			background-color: $color-gris1
+
+		& > .container
+			max-width: 900px
+			.ys-col-2
+				.ys-line
+					padding-top: 4em
+					padding-bottom: 4em
+					span
+						background-color: $color-amarillo1
+						display: block
+						height: 0.21em
+						width: 6em
+			.ys-content-parrafos
+				color: $color-negro1
+				font-size: 1.42em
+			.ys-content-artigas
+				background-color: rgba(255, 255, 255, 0.7)
+				color: $color-negro1				
+				font-size: 1.42em
+				font-style: italic
+				margin-top: 11.07em
+				padding: 1em 2em
+				position: relative
+				text-align: right
+				& > div
+					display: inline-block
+					vertical-align: middle
+					&:nth-of-type(1)
+						span
+							display: block
+							line-height: 1.75em
+					&:nth-of-type(2)
+						padding-left: 2em
+						vertical-align: middle
+						img
+							display: inline-block
+							vertical-align: middle
+			.ys-icon
+				position: absolute
+				top: -15px
+				right: -15px
+
+	.ys-seccion-caracteristicas
+		background-color: $color-azul1
+		padding-bottom: 2.5em
+		& > .container
+			background-color: $color-blanco1
+			margin-top: -2.5em
+			padding-left: 0
+			padding-right: 0
+			.ys-content-tit
+				background-color: $color-azul2
+				padding-top: 5em
+				padding-bottom: 5em
+				padding-left: 8.14em
+				-ms-font-feature-settings: "liga", "dlig"
+				-webkit-font-feature-settings: "liga", "dlig"
+				-moz-font-feature-settings: "liga", "dlig"
+				font-feature-settings: "liga", "dlig"
+				h3
+					color: $color-dorado1
+					font-size: 4.28em
+					font-weight: 900
+					width: 100%
+			.ys-content-cols
+				margin-top: 3.85em
+				.ys-tit					
+					span
+						border: solid 1px $color-amarillo2
+						color: $color-negro1
+						display: block
+						font-size: 1.42em
+						font-weight: 900
+						margin: 0 auto
+						margin-bottom: 2.5em
+						padding-top: 1em
+						padding-bottom: 1em
+						text-align: center
+						width: 95%
+				.ys-col-servicios, .ys-col-materiales
+					.ys-item
+						margin-bottom: 3.5em
+						.ys-img
+							text-align: center
+							img
+								display: inline-block
+								max-width: 91px
+								max-height: 91px
+						.ys-line
+							margin-top: 1.9em
+							margin-bottom: 1.9em
+							span
+								border-bottom: solid 3px $color-gris2
+								display: block
+								margin: 0 auto
+								width: 1.5em
+						.ys-txt
+							text-align: center
+							span
+								color: $color-gris3
+								display: block
+								font-weight: 700
+								font-size: 1em
+								max-width: 150px
+								margin: 0 auto
+
+	.ys-seccion-departamentos
+		background-color: transparent
+		padding-left: 0
+		padding-right: 0
+		position: relative
+
+		.ys-menu-departamentos
+			position: absolute
+			width: 100%
+			z-index: 9
+			.row
+				max-width: 800px
+				margin: 0 auto
+				text-align: center
+				span
+					color: $color-blanco1
+					cursor: pointer					
+					display: block
+					font-weight: 400
+					padding: 4em 1em
+					letter-spacing: 1px
+					&.ys-active
+						color: $color-amarillo2
+						font-weight: 900
+						font-size: 1.25em
+						padding-top: 3em
+		.carousel
+			position: relative
+			.ys-tit-slide
+				color: $color-blanco1
+				font-size: 4.28em
+				position: absolute
+				text-align: center
+				z-index: 10
+				top: 25%
+				width: 100%
+				margin-bottom: 4em
+				-ms-font-feature-settings: "liga", "dlig"
+				-webkit-font-feature-settings: "liga", "dlig"
+				-moz-font-feature-settings: "liga", "dlig"
+				font-feature-settings: "liga", "dlig"
+			.icon-next, .icon-prev				
+				color: $color-blanco1
+				font-size: 6em
+
+		.carousel, .item, .active, .carousel-inner		
+			height: 100%
+		.fill
+		    width: 100%
+		    height: 100%
+		    background-position: center
+		    -webkit-background-size: cover
+		    -moz-background-size: cover
+		    background-size: cover
+		    -o-background-size: cover	    
+
+	.ys-seccion-contacto
+		background-color: transparent
+		padding-left: 0
+		padding-right: 0
+		position: relative
+		.ys-content-pleca
+			background-color: $color-azul2
+			min-height: 42.42em
+			padding-left: 0
+			padding-right: 0
+			position: relative
+			z-index: 1
+		.ys-cuadro-contacto
+			background-color: $color-azul1
+			position: relative
+			z-index: 2
+			.row
+				.ys-col-1
+					padding-top: 3em
+					padding-bottom: 3em
+					padding-left: 4em	
+					h4
+						color: $color-negro1
+						font-size: 4.28em						
+						-ms-font-feature-settings: "liga", "dlig"
+						-webkit-font-feature-settings: "liga", "dlig"
+						-moz-font-feature-settings: "liga", "dlig"
+						font-feature-settings: "liga", "dlig"
+					.ys-line
+						background-color: $color-amarillo2
+						height: 3px
+						margin-top: 3em
+						width: 2.92em
+					.ys-campos
+						padding-top: 4em
+						.ys-etiqueta
+							color: $color-negro1
+							font-size: 1.42em
+							font-weight: 700
+						.ys-valor
+							a
+								color: $color-blanco1
+								font-size: 1.42em
+								font-weight: 700
+								line-height: 2	em
+								text-decoration: none	
+							&.ys-valordireccion
+								a
+									span
+										display: block
+				.ys-col-2
+					background-image: url('../images/back-contacto.png')
+					background-position: center center
+					background-size: cover
+					text-align: center
+					.ys-btn-agendacita
+						background-color: transparent
+						border: solid $color-blanco1 1px
+						color: $color-blanco1
+						display: inline-block
+						font-size: 1.42em
+						font-weight: 700						
+						margin-top: 45%
+						padding: 1em 4.5em
+		.ys-footer
+			background-color: transparent
+			background-size: cover
+			background-position: top
+			min-height: 77.14em
+			position: relative
+			&.ys-back-dia
+				background-image: url('../images/footer-day.png')
+			&.ys-back-noche
+				background-image: url('../images/footer-night.png')
+			.ys-frase
+				color: $color-blanco1
+				padding-top: 8%
+				span
+					display: block
+					font-size: 3.4em
+					text-align: center
+					&:nth-of-type(1)
+						font-weight: 900
+					&:nth-of-type(2)
+						font-weight: 400
+						margin-top: 2em
+					&:nth-of-type(3)
+						font-weight: 900
+			.ys-content-info
+				bottom: 2%				
+				left: 0
+				position: absolute
+				width: 100%
+				.row					
+					& > div
+						text-align: center						
+						&:nth-of-type(2)
+							border-left: solid 1px $color-amarillo2
+							border-right: solid 1px $color-amarillo2
+							padding: 1em 1em
+							& > *
+								display: inline-block
+								color: $color-negro1
+								font-size: 0.9em
+						&:nth-of-type(3)
+							span
+								color: $color-negro1
+								display: inline-block
+								vertical-align: middle
+								&:nth-of-type(1)
+									color: $color-negro1
+									font-size: 0.9em
+									margin-right: 0.5em
+							a
+								display: inline-block
+								vertical-align: middle
+								img
+									display: block
+									max-width: 125px
+									min-width: 125px
+
+/*- - - KeyFrames - - -*/
+@-webkit-keyframes backgroundScrollTop 
+	from
+		background-position: center -125px
+	to
+		background-position: center 0
+        
+@keyframes backgroundScrollTop
+	from
+		background-position: center -15px
+	to
+		background-position: center 0
+
+// -- -- --
+@-webkit-keyframes backgroundScrollBottom 
+	from
+		background-position: center 0
+	to
+		background-position: center -125px
+        
+@keyframes backgroundScrollBottom 
+	from
+		background-position: center 0
+	to
+		background-position: center -125px
+
+
+//--- --- ---
+//--- --- ---
+@import 'styles-responsive.sass';
